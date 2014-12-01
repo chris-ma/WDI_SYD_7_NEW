@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require_relative "../lib/animal"
+require_relative "../lib/client"
+require_relative "../lib/happytails_new"
+require_relative "../lib/shelter"
+
+HappyTails::Start.new.start

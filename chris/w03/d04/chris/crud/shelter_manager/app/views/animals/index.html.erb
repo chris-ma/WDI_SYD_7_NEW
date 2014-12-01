@@ -1,0 +1,22 @@
+<h1>The Animal Shelter</h1>
+<%= link_to 'Add new animal', new_animal_path %>
+<p></p>
+<table>
+  <tr>
+  <th style="width:150px;">Name</th>
+  <th style="width:150px;">Breed</th>
+  
+  <th colspan="3"></th>
+  </tr>
+ 
+<% @animals.each do |animal| %>
+  <tr>
+    <td><%= animal.name %></td>
+    <td><%= animal.breed %></td>
+    <td><%= link_to 'Show', animal_path(animal) %></td>
+    <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
+    <td><%= link_to 'Destroy', animal_path(animal),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>

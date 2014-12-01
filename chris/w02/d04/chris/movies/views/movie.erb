@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Search for your movie</title>
+<link rel="stylesheet" type="text/css" href="../normalize.css">
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+
+</head>
+
+<body>
+  <% if @movie %>
+
+        <div id="movie-container-left">
+        <img src="<%= @movie ["Poster"] %>" align="left" margin="20px">
+        </div>
+
+        <div id="movie-container-right">
+        <h2><a href="https://www.google.com/search?q=<%= @movie["Title"]%>"><%= @movie["Title"] %> </a>
+      </h2></a>
+         <h3> Summary </h3><br>
+         <%= @movie["Plot"] %>
+        <ul>
+          <li>Year: <%= @movie["Year"] %></li>
+          <li>Rated: <%= @movie["Rated"] %></li>
+          <li>Released: <%= @movie["Released"] %></li>
+          <li>Runtime: <%= @movie["Runtime"] %></li>
+          <li>Genre: <%= @movie["Genre"] %></li>
+          <li>Director: <%= @movie["Director"] %></li>
+          <li>Writer: <%= @movie["Writer"] %></li>
+          <li>Actors: <%= @movie["Actors"] %></li>
+          <li>Language: <%= @movie["Language"] %></li>
+          <li>Country: <%= @movie["Country"] %></li>
+          <li>Awards: <%= @movie["Awards"] %></li>
+          <li>Metascore: <%= @movie["Metascore"] %></li>
+          <li>Type: <%= @movie["Type"] %></li>
+          <li>Response: <%= @movie["Response"] %></li>
+          
+          <li><strong>Rotten Tomato Rating:</strong> 
+          <% @movie["tomatoRating"].to_i.times do |i| %>
+           <img src="/tomato.png" width="20px" height="20px">
+          <% end %></li>
+          
+          <li><strong>IMDB Rating: </strong>
+          <% @movie["imdbRating"].to_i.times do |i| %>
+           <img src="/star.png" width="20px" height="20px">
+          <% end %></li>
+          </ul>
+          <p></p>
+
+          <h3>Suggested Titles:</h3>
+         <%# if @movies_search %>
+         <%# @movies_search["Search"].each do |movie| %>
+         <!-- <a href="/movies/<%# movie["imdbID"] %>"> -->
+         <!-- <%# movie["Title"] %></a> -->
+
+          <%# end %>
+           
+         <%# end %>
+
+           <%# if @movie_list %>
+               <%#@movie_list.each do |movie| %>
+                <!-- <a href="/movies/<%#= movie["imdbID"] %>"> -->
+                <!-- <%#= movie["Title"] %></a> -->
+                <br>
+                <%# end %>
+            <%#end %>
+
+          </div>
+          
+              
+  <% end %>
+  </body>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Search for your movie</title>
+
+<link rel="stylesheet" type="text/css" href="../normalize.css">
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+
+</head>
+
+    <body>
+
+<header>
+        <h1> Movies </h1>
+        
+
+    <form action="/search" >
+   <input type="text" name="search" placeholder="Movie name"><br>
+     <input type="submit" value="Look Up Movie">
+
+    <input type="submit" value="I'm feeling easy" name="easy">
+    </form>
+
+</header>
+
+        <%= yield %>
+        
+    </body>
+
+</html>

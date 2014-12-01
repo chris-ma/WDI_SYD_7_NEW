@@ -1,0 +1,23 @@
+
+h1{
+font-size: 3em;
+}
+
+
+#my_square{
+background: red;
+width: 400px;
+height: 400px;
+
+}
+#sub_square
+{
+background: blue;
+width: 30%;
+height: 40px;
+}
+
+#big-section{
+
+
+}

@@ -1,0 +1,23 @@
+<p>
+  <a href="/posts/new">Add new post</a>
+</p>
+<p>
+  <a href="/authors/new">Add new author</a>
+</p>
+
+<ul>
+<% @posts.each do |post| %>
+  <li>
+    <strong><%= post["title"] %></strong>
+
+    Author: <strong><%= post["author_first_name"] + " " + post["author_last_name"] %></strong>
+
+    Actions: 
+    <a href="/posts/<%= post["id"] %>">Read</a>|<a href="/posts/<%= post["id"] %>/edit">Edit</a> |
+    <form action="/posts/<%= post["id"] %>" method="POST" style="display: inline;">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Destroy">)
+    </form>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Link adder</title>
+
+<link rel="stylesheet" type="text/css" href="/normalize.css">
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+
+</head>
+
+    <body>
+
+        <header>
+                <h1> Link.R </h1>  
+        </header>
+
+       <ul>
+        <% @links.each do |link| %>
+          <li><a href="http://<%= link['url']%>"><%= link['title'] %></a></li>
+          <%end %>
+      </ul>
+      
+ <a href="/tasks/new">  Add Link </a>     
+    </body>
+
+
+</html>

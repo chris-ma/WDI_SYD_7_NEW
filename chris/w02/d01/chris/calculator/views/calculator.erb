@@ -1,0 +1,21 @@
+<form action="/calculator" method="get">
+  <p>
+    <label for="First Number:">First Number:</label>
+    <input type="number" name="first_number" id="first_number">
+  </p>
+  <p>
+   <select name="operator">
+  <option value="Add">Add</option>
+  <option value="Subtract">Subtract</option>
+  <option value="Multiply">Multiply</option>
+  <option value="Divide">Divide</option>
+</select>
+  </p>
+  <p>
+    <label for="Second Number:">Second Number:</label>
+    <input type="number" name="second_number" id="second_number">
+  </p>
+  <button name="calculator" type="submit" >submit</button>
+<output name="answer" for="answer"> = <%= @answer %></output>  
+</form>
+

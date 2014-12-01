@@ -1,0 +1,10 @@
+<ul>
+		<% @books.each do |book|  %>
+		<li>
+			<h3><%= link_to book.title, book %></h3>
+			<p><%= book.chef %></p>
+			<p><%= link_to 'Edit', edit_book_path(@book) %></p>
+			<p><%= link_to 'Destroy', book, method: :delete  %></p>	
+		</li>	
+		<% end %>
+</ul>

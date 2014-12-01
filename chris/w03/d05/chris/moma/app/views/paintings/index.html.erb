@@ -1,0 +1,32 @@
+<h2> #Paintings</h2>
+
+<% @paintings.each do |painting| %>
+  <div id="painting_list">
+        <div id="left_image">
+          <img src="<%= painting.image %>" >
+        </div>
+
+        <div id="right_image">
+        <ul>
+          <li>
+          <%= painting.title %>
+          </li>
+          <li>
+          <%= painting.year %>
+          </li>
+          <li>
+          <%= painting.medium %>
+          </li>
+          <li>
+          <%= painting.style %>
+          </li>
+          <li>
+            <h5><%= link_to 'Edit', edit_painting_path(painting) %></h5>
+
+          </li>
+          </ul>
+
+          
+        </div>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<h2><%= @painting.title %></h2>
+    <ul>
+        <li>
+        <%= @painting.year %>
+        </li>
+        <li>
+        <%= @painting.style %>
+        </li>
+        <li>
+        <%= @painting.medium %>
+        </li>
+        <li>
+        <img src="<%= @painting.image %>">
+        </li>
+
+    </ul>
+
+    <%= link_to 'Edit', edit_painting_path  %>
+    <%= link_to 'Delete', painting_path(@painting), method: :delete, data: { confirm: 'Are you sure?' } %>
