@@ -1,4 +1,8 @@
 class BooksController < ApplicationController
+  
+before_action :find_book, only: [:show, :edit, :destroy, :update]
+
+
   def index
   	@books = Book.all 
   end
@@ -17,16 +21,16 @@ class BooksController < ApplicationController
   end
 
   def show
-  	@book = Book.find params[:id]
+  	
   end
 
   def edit
-  	@book = Book.find params[:id]
+  	
   end
 
 
   def update
-  	@book = Book.find params[:id]
+  	
   	if @book.update(book_params)
 	  	redirect_to @book		  		
   	else
@@ -36,7 +40,7 @@ class BooksController < ApplicationController
 
 
   def destroy
-    @book = Book.find params[:id]
+    
   	@book.destroy
   	redirect_to books_path
   end
@@ -48,5 +52,9 @@ class BooksController < ApplicationController
    															 :chef,
    															 :image
      														)
+  end
+
+    def find_book
+    @book = Book.find params[:id]
   end
 end

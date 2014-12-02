@@ -29,6 +29,14 @@
 #
 
 Rails.application.routes.draw do
+  get 'ingredients/name'
+
+  get 'ingredients/measurement'
+
+  get 'ingredients/cost'
+
+  get 'ingredients/image'
+
   get 'recipes/name'
 
   get 'recipes/course'

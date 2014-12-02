@@ -1,13 +1,15 @@
-<h1>Cookbooks</h1>
+<h2>Cookbooks</h2>
 
-<p><%= link_to "Add book", new_book_path %></p>
+<h4><%= link_to "+ Add book", new_book_path %></h4>
 
 <ul>
 		<% @books.each do |book|  %>
 		<li>
 			<h3><%= link_to book.title, book %></h3>
-      <%= image_tag book.image %>
-			<p><%= book.chef %></p>
+      <p><%= image_tag book.image %>
+        <br>
+			By <%= book.chef %></p>
+    
 
 			
 

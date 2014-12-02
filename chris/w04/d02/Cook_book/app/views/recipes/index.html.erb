@@ -1,4 +1,4 @@
-<h1>Recipes</h1>
+<h2>Recipes</h2>
 
 <p><%= link_to "Add recipe", new_recipe_path %></p>
 
@@ -6,7 +6,8 @@
     <% @recipes.each do |recipe|  %>
     <li>
       <h3><%= link_to recipe.name, recipe %></h3>
-      <p><%= recipe.course %></p>
+      <p><%= image_tag recipe.image %><br>
+          <%= recipe.course %></p>
       
 
     </li> 
