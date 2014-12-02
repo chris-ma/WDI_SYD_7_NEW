@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     if @recipe.save #If recipe saved correctly in the db
-      redirect_to recipe_path(@recipe) #Redirect that @book's path
+      redirect_to recipe_path(@recipe) #Redirect that @recipe's path
     else 
       render :new #Else it will render the 'new.html.erb' view
     end
