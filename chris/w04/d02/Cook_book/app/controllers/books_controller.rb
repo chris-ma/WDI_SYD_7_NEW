@@ -14,6 +14,7 @@ before_action :find_book, only: [:show, :edit, :destroy, :update]
   def create
   	@book = Book.new(book_params)
   	if @book.save #If book saved correctly in the db
+      
 	  	redirect_to book_path(@book) #Redirect that @book's path
 	  else 
 	  	render :new #Else it will render the 'new.html.erb' view

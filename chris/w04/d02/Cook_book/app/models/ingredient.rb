@@ -12,6 +12,13 @@
 #
 
 class Ingredient < ActiveRecord::Base
+
+validates :name, uniqueness: true
+validates :name, presence: true
+validates :measurement, presence: true
+validates :image, presence: true
+
+
 	has_many :ingredients_recipes
 	has_many :recipes, through: :ingredients_recipes
 end

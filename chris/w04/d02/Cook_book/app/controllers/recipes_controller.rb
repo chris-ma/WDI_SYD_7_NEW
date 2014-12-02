@@ -55,7 +55,8 @@ before_action :find_recipe, only: [:show, :edit, :destroy, :update]
                                  :servingsize,
                                  :instructions,
                                  :image,
-                                 :book_id
+                                 :book_id,
+                                 {ingredient_ids: []}
                                 )
   end
 

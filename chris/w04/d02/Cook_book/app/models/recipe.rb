@@ -14,6 +14,11 @@
 #
 
 class Recipe < ActiveRecord::Base
+
+  validates :name, presence: true
+  validates :image, presence: true
+  validates :instructions, length: { minimum: 200}
+
 	belongs_to :book
 
 	has_many :ingredients_recipes

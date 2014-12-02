@@ -7,6 +7,9 @@
     <div>Serving size:<%= @recipe.servingsize %></div>
     <div>Instructions: <%= @recipe.instructions %></div>
     <div>Featured in: <%= @recipe.book.title %></div>
+    <div> Ingredients <% @recipe.ingredients.each do |ingredients|  %>
+    <%=  %>
+    <% end %></div>
     <div><%= image_tag @recipe.image  %></div>
 
 

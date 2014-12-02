@@ -12,5 +12,9 @@
 #
 
 class Book < ActiveRecord::Base
-	has_many :recipes
+	
+validates :title, presence: true
+validates :image, presence: true
+
+  has_many :recipes
 end
