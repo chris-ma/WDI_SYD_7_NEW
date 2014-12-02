@@ -29,6 +29,18 @@
 #
 
 Rails.application.routes.draw do
+  get 'recipes/name'
+
+  get 'recipes/course'
+
+  get 'recipes/cooktime'
+
+  get 'recipes/servingsize'
+
+  get 'recipes/instructions'
+
+  get 'recipes/image'
+
   get 'books/index'
 
   root 'pages#index'
