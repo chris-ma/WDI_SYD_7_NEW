@@ -53,7 +53,8 @@ before_action :find_song, only: [:show, :edit, :destroy, :update]
   def song_params
     params.require(:song).permit(:name,
                                  :year,
-                                 :genre                              
+                                 :genre,
+                                 :artist_id                              
                                 )
   end
 

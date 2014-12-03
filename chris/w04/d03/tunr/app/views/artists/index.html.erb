@@ -1,9 +1,11 @@
 <h2>Artists</h2>
-
+<div id="add_button">
 <%= link_to "Add Artists", new_artist_path %>
-<p>
-<% @artist.each do |artist|  %>
+</div>
+<br>
 
+<% @artist.each do |artist|  %>
+<div id="list_items">
 <%= link_to artist.name, artist  %>
-</p>
+</div>
 <% end %>

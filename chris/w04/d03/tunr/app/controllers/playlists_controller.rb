@@ -6,7 +6,7 @@ before_action :find_playlist, only: [:show, :edit, :destroy, :update]
 
 
   def index
-    @playlist = Playlist.all 
+    @playlists = Playlist.all 
   end
 
   def new
@@ -51,7 +51,8 @@ before_action :find_playlist, only: [:show, :edit, :destroy, :update]
   private
   def playlist_params
     params.require(:playlist).permit(:name,
-                                 :description                              
+                                 :description,  
+                                 { song_ids: [] }                            
                                 )
   end
 

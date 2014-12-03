@@ -23,6 +23,8 @@ before_action :find_artist, only: [:show, :edit, :destroy, :update]
   end
 
   def show
+
+
     
   end
 
@@ -52,7 +54,7 @@ before_action :find_artist, only: [:show, :edit, :destroy, :update]
     params.require(:artist).permit(:name,
                                  :label, 
                                  :bio,
-                                 {song_id: []}                             
+                                 {song_id: []}                        
                                 )
   end
 

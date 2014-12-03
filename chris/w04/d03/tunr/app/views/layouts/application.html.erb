@@ -7,28 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1><%= image_tag("http://cdn.bulbagarden.net/upload/thumb/0/02/129Magikarp.png/250px-129Magikarp.png", :alt => "Tunr") %>
-Tunr</h1>
+  <h1>Tunr</h1>
 
 <!-- from http://guides.railsgirls.com/devise/ -->
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+    <% end %>
 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-<p>
-<h3>
-<%= link_to "Playlists", playlists_path %>
-<%= link_to "Artists", artists_path %>
-<%= link_to "Songs", songs_path %>
-</h3>
-<p>
+    <p>
+        <h3>
+        <div id="nav_bar"><%= link_to "Playlists", playlists_path %></div>
+       <div id="nav_bar"> <%= link_to "Artists", artists_path %></div>
+       <div id="nav_bar"> <%= link_to "Songs", songs_path %></div>
+        </h3>
+        
+    <p>
 
 
 <%= yield %>

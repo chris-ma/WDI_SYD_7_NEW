@@ -1,8 +1,13 @@
+
+<div id="add_button">
 <%= link_to "New Song", new_song_path %>
-
+</div>
 <p>
-<% @song.each do |song|  %>
 
+<% @song.each do |song|  %>
+<div id="list_items">
 <%= link_to song.name, song %>
-</p>
+</div>
 <% end %>
+
+</p>
