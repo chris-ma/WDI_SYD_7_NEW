@@ -1,0 +1,27 @@
+<%= form_for @song do |f| %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </div>
+
+    <div class="form-group">
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+  </div>
+
+    <div class="form-group">
+    <%= f.label :artist_ids %> 
+    <%= f.collection_select :artist_id, Artist.all, :id, :name %>  
+    </div> 
+
+
+  <div class="form-group">
+    <%= f.submit %> 
+  </div>          
+<% end %>
