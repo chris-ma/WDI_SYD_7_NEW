@@ -40,7 +40,7 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 100;
     letter-spacing: 1px;
     display: block;
@@ -54,6 +54,8 @@ h1{
   line-height: .6em;
   padding: 20px;
   display: relative;
+  color: darksalmon;
+  text-decoration: dashed;
 
 }
 p {
@@ -68,7 +70,8 @@ a {
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
-    color: tomato;
+    color: salmon;
+    text-decoration: none;
     
 
 }
@@ -90,22 +93,88 @@ li{
     line-height: 1.5em;
 }
 
+hr{
+
+border-color: salmon;
+border-style: dashed;
+
+}
+
 #list_items{
 display: inline-block;
-background-color: salmon;
-line-height: 2em;
+margin: 5px 5px;
+border-color: lightsalmon;
+border-width: 1px;
+border-style: dotted;
+border-radius: 5px;
+padding: 5px;
 }
+
+#list_items:hover {
+-webkit-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1);
+display: inline-block;
+margin: 5px 0;
+border-color: lightsalmon;
+border-width: 1px;
+border-style: dotted;
+border-radius: 5px;
+padding: 5px;
+}
+
+
+
 
 #nav_bar{
 display: inline-block;
-background-color: coral;
+border-color: salmon;
+border-width: 1px;
+border-style: dashed;
 color: white;
 text-decoration: none;
+padding: 20px;
+}
+
+#nav_bar:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+display: inline-block;
+border-color: salmon;
+border-width: 1px;
+border-style: dashed;
+color: white;
+text-decoration: none;
+padding: 20px;
 }
 
 #add_button{
 display: inline-block;
-background-color: ;
+border-color: salmon;
+border-width: 1px;
+border-style: solid;
+text-decoration: none;
+border-radius: 5px;
+margin: 10px 10px;
+padding: 10px;
+}
+
+#add_button:hover{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+display: inline-block;
 color: white;
 text-decoration: none;
+border-radius: 5px;
+margin: 10px 10px;
+padding: 10px;
+}
+
+.alert{
+color: white;
+background-color: lightsalmon;
+padding: 20px;
+
 }

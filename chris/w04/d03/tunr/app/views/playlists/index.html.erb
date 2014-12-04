@@ -1,12 +1,16 @@
+<h2>Playlist</h2>
 
+<% if user_signed_in? %>
 <div id="add_button">
-<%= link_to "New Playlist", new_playlist_path %>
+<%= link_to "+ New Playlist", new_playlist_path %>
 </div>
-<br>
+<% end -%>
 
 
+<p>
 <% @playlists.each do |playlist|  %>
 <div id="list_items">
 <%= link_to playlist.name, playlist %>
 </div>
 <% end %>
+</p>

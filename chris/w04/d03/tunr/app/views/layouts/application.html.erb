@@ -7,7 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1>Tunr</h1>
+  <h1> <%= link_to "Tunr", root_path %></h1>
+  <hr>
 
 <!-- from http://guides.railsgirls.com/devise/ -->
     <% if user_signed_in? %>

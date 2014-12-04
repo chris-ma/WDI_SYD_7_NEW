@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 
 
-
+before_action :authorize_admin!, except: [:index, :show]
   
 before_action :find_song, only: [:show, :edit, :destroy, :update]
 
