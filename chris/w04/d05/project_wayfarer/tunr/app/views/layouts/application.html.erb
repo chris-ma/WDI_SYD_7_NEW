@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tunr</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+      <div id="log_in_area">
+         <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <% end %>
+      </div>
+
+
+  
+    <div id="body_region">
+
+           <div id="heading">
+              <h1> <%= link_to "Tunr", root_path %></h1>
+              <hr>
+           </div>
+           
+               <div class="alert_container">
+                  <p class="notice"><%= notice %></p>
+                  <p class="alert"><%= alert %></p>
+               </div>
+
+                <h3>
+                <div id="nav_bar"><%= link_to "Playlists", playlists_path %></div>
+               <div id="nav_bar"> <%= link_to "Artists", artists_path %></div>
+               <div id="nav_bar"> <%= link_to "Songs", songs_path %></div>
+                </h3>
+                
+
+
+    <%= yield %>
+
+    </div>
+
+</body>
+</html>

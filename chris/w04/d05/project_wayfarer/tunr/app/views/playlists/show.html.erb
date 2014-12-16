@@ -1,0 +1,23 @@
+
+    <h2><%= @playlist.name %></h2>
+
+    Description: <%= @playlist.description %>
+
+        <% if @playlist.songs.count == 0 %>
+  <p>Coming soon!</p>
+<% else %>
+  <% @playlist.songs.each do |song| %>
+    <div class="song">
+      <h3><%= link_to song.name, song %></h3>
+    </div>
+  <% end %>
+<% end %>
+
+
+
+  
+<% if user_signed_in? && (current_user.admin? || current_user.playlist_ids.include?(@playlist.id))%>
+
+  <p><%= link_to 'Edit', edit_playlist_path(@playlist) %> |
+  <%= link_to 'Destroy', @playlist, method: :delete, data: {confirm: 'Are you sure?'} %></p>
+<% end -%>

@@ -1,0 +1,224 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    width: 100%;
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+    color: black;
+    background-color: white;
+}
+
+
+
+
+html {
+    width: 100%;
+    
+}
+
+#body_region{
+width: 70%;
+margin: 0 auto;
+}
+
+#log_in_area{
+display: block;
+background-color: black;
+color: white;
+margin: -1% 0 0 -1%;
+padding: 5px 20px 5px 15px;
+text-align: right;
+font-size: 0.8em;
+
+}
+
+#heading{
+padding: 20px 0 0 0;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    text-transform: uppercase;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    display: block;
+
+}
+
+h1{
+
+  font-size: 2em;
+  text-align: left;
+  display: relative;
+  color: darksalmon;
+  text-decoration: dashed;
+}
+
+
+p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+a {
+
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: salmon;
+    text-decoration: none;
+    
+
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+
+}
+
+
+header{
+margin: 0 auto;
+text-align: center;
+}
+
+li{
+    list-style: none;
+    line-height: 1.5em;
+}
+
+hr{
+
+border-color: salmon;
+border-style: dashed;
+
+}
+
+#list_items{
+display: inline-block;
+margin: 5px 5px;
+border-color: lightsalmon;
+border-width: 1px;
+border-style: dotted;
+border-radius: 5px;
+padding: 5px;
+}
+
+#list_items:hover {
+-webkit-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1);
+display: inline-block;
+margin: 5px 0;
+border-color: lightsalmon;
+border-width: 1px;
+border-style: dotted;
+border-radius: 5px;
+padding: 5px;
+}
+
+
+
+
+#nav_bar{
+display: inline-block;
+border-color: salmon;
+border-width: 1px;
+border-style: dashed;
+color: white;
+text-decoration: none;
+padding: 20px;
+}
+
+#nav_bar:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+display: inline-block;
+border-color: salmon;
+border-width: 1px;
+border-style: dashed;
+color: white;
+text-decoration: none;
+padding: 20px;
+}
+
+#add_button{
+display: inline-block;
+border-color: salmon;
+border-width: 1px;
+border-style: solid;
+text-decoration: none;
+border-radius: 5px;
+margin: 10px 10px;
+padding: 10px;
+}
+
+#add_button:hover{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+display: inline-block;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+margin: 10px 10px;
+padding: 10px;
+}
+
+
+
+.alert_container{
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s; 
+}
+
+
+
+.alert_container.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.alert{
+color: white;
+background-color: lightsalmon;
+padding: 20px;
+display: block;
+  transform: translateY(-40px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+}
+
+
+.is-visible .alert {
+  transform: translateY(0);
+}

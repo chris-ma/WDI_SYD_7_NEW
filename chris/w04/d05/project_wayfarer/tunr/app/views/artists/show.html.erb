@@ -1,0 +1,16 @@
+
+
+    <h2><%= @artist.name %></h2>
+
+    label: <%= @artist.label %>
+  
+    <div>Biography: <%= @artist.bio %></div>
+
+   <% @artist.songs.each do |song| %>
+    
+      <div><%= link_to song.name, song %></div>
+      <% end -%>
+<% if user_signed_in? && current_user.admin? %>
+  <p><%= link_to 'Edit', edit_artist_path(@artist) %> |
+  <%= link_to 'Destroy', @artist, method: :delete, data: {confirm: 'Are you sure?'} %></p>
+<% end %>

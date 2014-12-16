@@ -1,0 +1,11 @@
+
+<h3>Play now</h3>
+
+<% @playlists.each do |playlist| %>
+
+  <p>
+  <strong><%= link_to playlist.name, playlist %></strong>
+  <%= playlist.description.truncate(100) %>
+  </p>
+<% end %>
+

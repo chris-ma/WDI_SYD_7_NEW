@@ -1,0 +1,15 @@
+<h3>Artists</h3>
+
+<% if user_signed_in? && current_user.admin? %>
+    <div id="add_button">
+        <%= link_to "+ Add Artists", new_artist_path %>
+    </div>
+<% end %>
+
+<p>
+<% @artist.each do |artist|  %>
+<div id="list_items">
+<%= link_to artist.name, artist  %>
+</div>
+<% end %>
+</p>
