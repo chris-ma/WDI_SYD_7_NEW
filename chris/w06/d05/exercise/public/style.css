@@ -1,0 +1,35 @@
+
+
+html{
+  font-family: arial, sans serif;
+
+}
+
+header{
+
+}
+
+nav{
+  display: inline-block;
+
+
+
+}
+
+section{
+width: 75%;
+float: left;
+display: block;
+
+}
+
+#sidebar{
+  width: 25%;
+  float: left;
+  display: block;
+
+}
+
+footer{
+
+}

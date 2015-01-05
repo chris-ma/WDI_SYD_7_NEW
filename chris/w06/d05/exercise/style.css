@@ -1,0 +1,60 @@
+
+*{
+
+  border-sizing: border-box;
+}
+
+
+html{
+  font-family: arial, sans serif;
+
+}
+
+header{
+
+}
+
+nav{
+  
+  width: 100%;
+  float: left;
+
+}
+#container{
+width: 100%
+
+}
+
+section{
+width: 75%;
+float: left;
+display: block;
+padding: 10px;
+
+}
+
+#sidebar{
+  width: 25%;
+  float: left;
+  display: block;
+
+}
+
+footer{
+
+}
+
+
+body {
+    width: 100%;
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+    color: black;
+    background-color: white;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
