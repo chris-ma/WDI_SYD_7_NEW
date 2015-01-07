@@ -1,0 +1,39 @@
+*{ box-sizing: borderbox;}
+
+body{
+  background-color: salmon;
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 100;
+  color:white;
+}
+
+a{
+  color: yellow;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+
+}
+
+img{
+background-size: 100%;
+width: 400px;
+height: 400px;
+padding: 20px;
+
+}
+
+#container{
+  width: 80%;
+  background-color: tomato;
+
+}
+
+.tag{
+  float: left;
+  border: 10px solid salmon;
+  width: 25%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: lightsalmon;
+}
