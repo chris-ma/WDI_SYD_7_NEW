@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @todotask.text %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @todotask.notes %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @todotask.completed %>
+</p>
+
+<p>
+  <strong>Timestamp:</strong>
+  <%= @todotask.timestamp %>
+</p>
+
+<%= link_to 'Edit', edit_todotask_path(@todotask) %> |
+<%= link_to 'Back', todotasks_path %>

@@ -1,0 +1,55 @@
+
+  
+  <input type="text" id="add-todo">
+
+<!-- 
+
+<form id="add-todo">
+  <p>
+    <label for="todo-text">Text</label>
+    <input type="text" id="todo-text">
+  </p>
+  <p>
+    <label for="todo-notes">Notes</label>
+    <textarea id="todo-notes"></textarea>
+  </p>
+  <p>
+    <input type="checkbox" id="todo-completed">
+    <label for="todo-completed">Done?</label>
+  </p>
+  <p>
+    <input type="submit" value="Add Todo">
+  </p>
+</form>
+
+<h1>Listing Todotasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Notes</th>
+      <th>Completed</th>
+      <th>Timestamp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todotasks.each do |todotask| %>
+      <tr>
+        <td><%= todotask.text %></td>
+        <td><%= todotask.notes %></td>
+        <td><%= todotask.completed %></td>
+        <td><%= todotask.timestamp %></td>
+        <td><%= link_to 'Show', todotask %></td>
+        <td><%= link_to 'Edit', edit_todotask_path(todotask) %></td>
+        <td><%= link_to 'Destroy', todotask, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todotask', new_todotask_path %> -->
