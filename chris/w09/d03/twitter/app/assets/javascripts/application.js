@@ -19,3 +19,9 @@
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree .
+
+var statusesCollection = new Statuses(); //coming from the collections
+
+var timelineView = new TimelineView({ collection: statusesCollection });  ///parse in the collection
+
+$("body").append(timelineView.el);  //appended the timelineView to the body of the HTML
