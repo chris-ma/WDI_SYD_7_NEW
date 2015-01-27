@@ -22,6 +22,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'spring-commands-rspec'
   gem 'capybara'                    #UI testing
   gem 'factory_girl_rails'          #model testing
   gem 'byebug'
