@@ -17,8 +17,8 @@
 RSpec.configure do |config|
 
   config.backtrace_exclusion_patterns = [ 
-   /  \.rvm /
-  ]
+   /\.rvm /
+]
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
