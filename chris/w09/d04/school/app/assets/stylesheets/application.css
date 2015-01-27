@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body{
+background-image: url(http://40.media.tumblr.com/tumblr_mbhob2FvZO1rv94yoo1_r2_500.png);
+}
+
+#background-area{
+  background-color: lightgrey ;
+  opacity: 0.8;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0px auto;
+}
+
+#feed-box{
+  background-color: white;
+  border-radius: 10px;
+  border: 10px solid lightgrey;
+  box-shadow: 5px;
+  padding: 15px;
+  margin: 15px auto;
+  width: 80vw;
+}
+
+.content-box{
+  font-size: 1.5em;
+
+  font-family: monospace;
+  color: darkgrey;
+  font-weight: 100;
+  width: 70vw;
+
+}
+
+.text-box{
+  font-size: 2em;
+  font-family: monospace;
+  color: magenta;
+}
+
+.like{
+  float: right;
+
+}
+
+button{
+  background-image: url(http://rs858.pbsrc.com/albums/ab148/SuperNyappyOfLove/Kawaii%20Stuff/Pixels/031.gif~c200);
+}

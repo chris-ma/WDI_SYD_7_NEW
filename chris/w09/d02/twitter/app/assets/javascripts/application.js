@@ -13,6 +13,22 @@
 
 //= require jquery_ujs
 //= require turbolinks
-//=require_tree ./models
-//=require_tree ./collections
+//= require handlebars.runtime
+//= require_tree ./templates
+//= require_tree ./models
+//= require_tree ./collections
 //= require_tree .
+
+
+var statusCollection = new Statuses();
+
+statusCollection.on("add", function(status){   //a model gets passed in where status is located
+  $("body").append(
+      JST['status'](             //reference from status.hbs
+        status.toJSON()          // model to javascript object that's JSON compatible
+      )  
+  );
+});
+
+statusCollection.fetch();       //fetch data from server
+

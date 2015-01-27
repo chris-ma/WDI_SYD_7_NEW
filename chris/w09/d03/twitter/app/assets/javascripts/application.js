@@ -20,6 +20,10 @@
 //= require_tree ./views
 //= require_tree .
 
+
+
+//renders the view of the content input
+
 var statusesCollection = new Statuses(); //coming from the collections
 
 var timelineView = new TimelineView({ collection: statusesCollection });  ///parse in the collection
